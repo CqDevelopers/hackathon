@@ -44,11 +44,24 @@ public class UserListController {
 	//createUser.add(map1);
 	//System.out.println(createUser);
 	
-	//ユーザ情報の登録
-	User user = new User();
-	BeanUtils.populate(user, map1);
+	User user1 = new User();
 	
-	userService.create(user);
+	//mapからbeanへの変換
+	BeanUtils.populate(user1, map1);
+	
+	//ユーザ情報の登録
+	userService.create(user1);
+	
+	Map<String, Object> map2 = new HashMap<>();
+	map2.put("id", "user02");
+	map2.put("userName", "クオリカ二郎");
+	map2.put("location", "東京都新宿区西新宿８丁目１７−１ 住友不動産新宿グランドタワー23F");
+	map2.put("photoUrl", "http://localhost:3000/samples/image");
+
+	User user2 = new User();
+	BeanUtils.populate(user2, map2);
+	
+	userService.create(user2);
 	
 	//ユーザ情報の取得
     Collection<User> userList = userService.findAll();
