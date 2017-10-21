@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import hack.domain.model.Todo;
-import hack.domain.service.todo.TodoService;
+//import hack.domain.model.Todo;
+//import hack.domain.service.todo.TodoService;
 
 /*
  * サンプル
@@ -28,28 +27,36 @@ import hack.domain.service.todo.TodoService;
 @RequestMapping("todos")
 public class TodoRestController {
 	
-	@Inject
-    TodoService todoService;
-    @Inject
-    Mapper beanMapper;
+//	@Inject
+//    TodoService todoService;
+//    @Inject
+//    Mapper beanMapper;
 
-    @RequestMapping(method = RequestMethod.GET) 
-    @ResponseStatus(HttpStatus.OK)
-    public List<TodoResource> getTodos() {
-        Collection<Todo> todos = todoService.findAll();
-        List<TodoResource> todoResources = new ArrayList<>();
-        for (Todo todo : todos) {
-            todoResources.add(beanMapper.map(todo, TodoResource.class));
-        }
-        return todoResources; 
-    }
+//    @RequestMapping(method = RequestMethod.GET) 
+//    @ResponseStatus(HttpStatus.OK)
+//    public List<TodoResource> getTodos() {
+//        Collection<Todo> todos = todoService.findAll();
+//        List<TodoResource> todoResources = new ArrayList<>();
+//        for (Todo todo : todos) {
+//            todoResources.add(beanMapper.map(todo, TodoResource.class));
+//        }
+//        return todoResources; 
+//    }
     
-    @RequestMapping(method = RequestMethod.POST)
+//    @RequestMapping(method = RequestMethod.POST)
+//	@ResponseStatus(HttpStatus.CREATED)
+//	public TodoResource postTodos(@RequestBody @Validated TodoResource todoResource) { 
+//        Todo createdTodo = todoService.create(beanMapper.map(todoResource, Todo.class));
+//        TodoResource createdTodoResponse = beanMapper.map(createdTodo, TodoResource.class);
+//        return createdTodoResponse; 
+//    }
+	
+	@RequestMapping(method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public TodoResource postTodos(@RequestBody @Validated TodoResource todoResource) { 
-        Todo createdTodo = todoService.create(beanMapper.map(todoResource, Todo.class));
-        TodoResource createdTodoResponse = beanMapper.map(createdTodo, TodoResource.class);
-        return createdTodoResponse; 
+//        Todo createdTodo = todoService.create(beanMapper.map(todoResource, Todo.class));
+//        TodoResource createdTodoResponse = beanMapper.map(createdTodo, TodoResource.class);
+        return todoResource; 
     }
 
 }
