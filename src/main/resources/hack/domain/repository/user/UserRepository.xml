@@ -5,23 +5,44 @@
 <mapper namespace="hack.domain.repository.user.UserRepository">
 
     <resultMap id="userResultMap" type="User">
-        <id property="userId" column="user_id" />
+        <id property="id" column="id" />
         <result property="userName" column="user_name" />
-        <result property="createdAt" column="created_at" />
+        <result property="location" column="location" />
+        <result property="photoUrl" column="photo_url" />
     </resultMap>
     
     <select id="findAll" resultMap="userResultMap">
     <![CDATA[
         SELECT
-            user_id,
+            id,
             user_name,
-            created_at
+            location,
+            photo_url
         FROM
             user
     ]]>
     </select>
     
-    <select id="findOne" parameterType="String" resultMap="userResultMap">
+    <insert id="create" parameterType="User">
+    <![CDATA[
+        INSERT INTO user
+        (
+            id,
+            user_name,
+            location,
+            photo_url
+        )
+        VALUES
+        (
+            #{id},
+            #{userName},
+            #{location},
+            #{photoUrl}
+        )
+    ]]>
+    </insert>
+    
+    <!-- <select id="findOne" parameterType="String" resultMap="userResultMap">
     <![CDATA[
         SELECT
             user_id,
@@ -33,23 +54,6 @@
             user_id = #{userId}
     ]]>
     </select>
-    
-    <insert id="create" parameterType="User">
-    <![CDATA[
-        INSERT INTO user
-        (
-            user_id,
-            user_name,
-            created_at
-        )
-        VALUES
-        (
-            #{userId},
-            #{userName},
-            #{createdAt}
-        )
-    ]]>
-    </insert>
 
     <update id="update" parameterType="User">
     <![CDATA[
@@ -69,6 +73,6 @@
         WHERE
             user_id = #{userId}
     ]]>
-    </delete>
+    </delete> -->
     
 </mapper>

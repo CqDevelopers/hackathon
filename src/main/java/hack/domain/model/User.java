@@ -7,18 +7,20 @@ public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String userId;
+	private String id;
 
     private String userName;
 
-    private Date createdAt;
+    private String location;
+    
+    private String photoUrl;
 
-	public String getUserId() {
-		return userId;
+	public String getId() {
+		return id;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getUserName() {
@@ -29,13 +31,20 @@ public class User implements Serializable {
 		this.userName = userName;
 	}
 
-	public Date getCreatedAt() {
-		return createdAt;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+	public void setLocation(String location) {
+		this.location = location;
 	}
-    
+
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
+
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
+	}
     
 }

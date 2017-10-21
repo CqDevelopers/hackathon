@@ -27,12 +27,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User create(User user) {
-		
-		String userId = UUID.randomUUID().toString();
-        Date createdAt = new Date();
-
-        user.setUserId(userId);
-        user.setCreatedAt(createdAt);
        
         userRepository.create(user);
         
@@ -44,7 +38,7 @@ public class UserServiceImpl implements UserService {
 		
 		Date createdAt = new Date();
 		
-		user.setCreatedAt(createdAt);
+//		user.setCreatedAt(createdAt);
 		
 		userRepository.update(user);
 		
