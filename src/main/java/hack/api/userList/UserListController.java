@@ -89,7 +89,7 @@ public class UserListController {
       user.setLocation("東京都新宿区西新宿２丁目８−１");
       user.setPhotoUrl("http://localhost:3000/samples/image");
       user.setRequestDate("2017-10-22  10:00:00");
-      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map1/");
+      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map/1");
       users.add(user);
       
       //2人目 ユーザ情報登録
@@ -99,7 +99,7 @@ public class UserListController {
       user.setLocation("東京都新宿区新宿３丁目１４−１");
       user.setPhotoUrl("http://localhost:3000/samples/image");
       user.setRequestDate("2017-10-22 10:30:00");
-      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map1/");
+      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map/1");
       users.add(user);
       
     //3人目 ユーザ情報登録
@@ -109,7 +109,7 @@ public class UserListController {
       user.setLocation("東京都新宿区新宿３丁目3−37−1 フラッグス");
       user.setPhotoUrl("http://localhost:3000/samples/image");
       user.setRequestDate("2017-10-22  11:00:00");
-      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map2/");
+      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map/2");
       users.add(user);
       
     //4人目 ユーザ情報登録
@@ -119,7 +119,7 @@ public class UserListController {
       user.setLocation("東京都新宿区西新宿７丁目7−23−2");
       user.setPhotoUrl("http://localhost:3000/samples/image");
       user.setRequestDate("2017-10-22  11:30:00");
-      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map2/");
+      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map/2");
       users.add(user);
       
     //5人目 ユーザ情報登録
@@ -129,7 +129,7 @@ public class UserListController {
       user.setLocation("東京都新宿区新宿３丁目３８−１");
       user.setPhotoUrl("http://localhost:3000/samples/image");
       user.setRequestDate("2017-10-22  12:00:00");
-      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map1/");
+      user.setMapUrl("https://tomcat-team10.hackathon.i-lop.net/app/map/1");
       users.add(user);
       
       //「list」の内容を書きこむ
