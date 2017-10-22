@@ -14,6 +14,10 @@ public class User implements Serializable {
     private String location;
     
     private String photoUrl;
+    
+    private String requestDate;
+    
+    private String mapUrl;
 
 	public String getId() {
 		return id;
@@ -46,5 +50,21 @@ public class User implements Serializable {
 	public void setPhotoUrl(String photoUrl) {
 		this.photoUrl = photoUrl;
 	}
+	
+	public String getrequestDate() {
+        return requestDate;
+    }
+
+    public void setRequestDate(String requestDate) {
+        this.requestDate = requestDate;
+    }
+	
+    public String getMapUrl() {
+        return mapUrl;
+    }
+
+    public void setMapUrl(String mapUrl) {
+        this.mapUrl = mapUrl;
+    }
     
 }
