@@ -86,7 +86,7 @@ public class PushNoticeController {
 	private static void setValueMap(Map<String, Object> valueMap, String type) {
 		
 		//TODO：引数として受け取ったデバイストークンの情報を変数に格納する
-		String deviceToken = "80ed6e46cbf4029840d82e74460db4e4166fff6960dcf9af4cefcfe5b402c8f4";
+		String deviceToken = "cf7d3f14cdd21f83ba683d740f711411ef2410304b1ad5a841aa2f4398508d94";
 		
 		Map<String, Object> apns_sandbox = new HashMap<>();
 		

@@ -38,7 +38,7 @@ public class UserListController {
 	
   @RequestMapping(method = RequestMethod.GET)
   @ResponseStatus(HttpStatus.OK)
-  public String getTodos() throws Exception{ 
+  public Map<String, Object> getTodos() throws Exception{ 
 	  
 /*
     //List<Map<String, Object>> createUser = new ArrayList<Map<String, Object>>();
@@ -121,7 +121,9 @@ public class UserListController {
       
       
       //JSON形式に変換するメソッドへ
-      return makeJSONString(valueMap);
+//      String json = makeJSONString(valueMap);
+//      System.out.println(json);
+      return valueMap;
   }
   
   private static String makeJSONString(Map<String,Object> valueMap){
