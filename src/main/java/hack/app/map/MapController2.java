@@ -4,13 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("map1")
-public class MapController {
+@RequestMapping("map2")
+public class MapController2 {
 	
 	@RequestMapping(value = "/")
 	public String list() {
 		
-        return "map/map1";
+        return "map/map2";
     }
 
 }
